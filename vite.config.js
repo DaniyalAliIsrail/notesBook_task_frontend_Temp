@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy:{
       '/api':{
-        target: 'http://localhost:4000',
+        target: 'https://notes-backend-eta-three.vercel.app/',
         secure: false,
       }
     },
