@@ -75,7 +75,7 @@ export const CreatePost = () => {
 
     setPublishError(null);
     try {
-      const res = await fetch("/api/post/create", {
+      const res = await fetch("https://notes-backend-eta-three.vercel.app/api/post/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

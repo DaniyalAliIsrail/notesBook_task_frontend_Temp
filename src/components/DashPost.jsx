@@ -18,7 +18,7 @@ const DashPost = () => {
     }
     const fetchpost = async () => {
       try {
-        const res = await fetch(`/api/post/getpost?userId=${currentUser._id}`);
+        const res = await fetch(`https://notes-backend-eta-three.vercel.app/api/post/getpost?userId=${currentUser._id}`);
         console.log(currentUser._id);
         const data = await res.json();
         if (res.ok) {
@@ -42,7 +42,7 @@ const DashPost = () => {
     console.log(startIndex);
     try {
       const res = await fetch(
-        `/api/post/getpost?userId=${currentUser._id}&startIndex=${startIndex}`
+        `https://notes-backend-eta-three.vercel.app/api/post/getpost?userId=${currentUser._id}&startIndex=${startIndex}`
       );
       const data = await res.json();
       console.log(data);
@@ -64,7 +64,7 @@ const DashPost = () => {
     // console.log("currentUser._id", currentUser._id);
     try {
       //route paramter ka use keya gya hay
-      const res = await fetch(`/api/post/deletepost/${PostIdToDelete}/${currentUser._id}`, {
+      const res = await fetch(`https://notes-backend-eta-three.vercel.app/api/post/deletepost/${PostIdToDelete}/${currentUser._id}`, {
         method: 'DELETE',
         credentials: 'include', // Yeh line add karein - cookies ko include karne ke liye
         headers: {
