@@ -60,7 +60,7 @@ const OAuth = () => {
 
   return (
     <>
-      <Button
+      {/* <Button
         type="button"
         gradientDuoTone="greenToBlue"
         outline
@@ -68,7 +68,7 @@ const OAuth = () => {
       >
         <AiFillGoogleCircle className="w-6 h-5 mr-2" />
         Continue with Google
-      </Button>
+      </Button> */}
 
       {/* <Button
         type="button"
