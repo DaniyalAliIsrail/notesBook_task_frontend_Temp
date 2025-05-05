@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Home = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  console.log('All Posts:', allPosts);
   const stripHtml = (html) => {
     const div = document.createElement('div');
     div.innerHTML = html;
@@ -36,12 +37,12 @@ const Home = () => {
       ) : (
         allPosts.map((post) => (
           <div key={post._id} className="bg-white rounded-xl shadow-md overflow-hidden">
-            <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+            {/* <img src={post.image} alt={post.title} className="w-full h-48 object-cover" /> */}
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{post.title}</h2>
-              <p className="text-sm text-gray-600 mb-1">Category: {post.category}</p>
+              {/* <p className="text-sm text-gray-600 mb-1">Category: {post.category}</p> */}
               <p className="text-gray-700 text-sm mb-3">{stripHtml(post.content)}</p>
-              <p className="text-xs text-gray-400">Created: {new Date(post.createdAt).toLocaleString()}</p>
+              {/* <p className="text-xs text-gray-400">Created: {new Date(post.createdAt).toLocaleString()}</p> */}
             </div>
           </div>
         ))
