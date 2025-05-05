@@ -15,7 +15,7 @@ const Home = () => {
         // const res = await fetch('/api/post/getAllPost');
         const data = await res.json();
         console.log('API Response:', data);
-        setAllPosts(data.posts);
+        setAllPosts(data);
         // setAllPosts(data);
         setLoading(false);
       } catch (error) {
