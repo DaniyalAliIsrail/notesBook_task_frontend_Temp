@@ -35,7 +35,8 @@ const Signin = () => {
 
     try {
       dispatch(signInStart());
-      const res = await fetch("/api/auth/signin", {
+      //  'https://notes-backend-eta-three.vercel.app'
+      const res = await fetch("https://notes-backend-eta-three.vercel.app/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

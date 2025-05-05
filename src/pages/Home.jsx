@@ -11,7 +11,8 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch('/api/post/getAllPost');
+        const res = await fetch('https://notes-backend-eta-three.vercel.app/api/post/getAllPost');
+        // const res = await fetch('/api/post/getAllPost');
         const data = await res.json();
         console.log('API Response:', data);
         setAllPosts(data.posts);
